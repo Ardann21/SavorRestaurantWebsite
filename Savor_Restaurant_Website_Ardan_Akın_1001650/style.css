@@ -1,0 +1,625 @@
+html{
+  scroll-behavior: smooth;
+}
+body { 
+    font-family: "Permanent Marker", cursive;
+    font-weight: 300;
+    font-style: normal;
+     margin: 0;
+    padding: 0;
+    background-color: rgb(226, 226, 226);
+    
+ 
+    }
+/*Header */
+    .navbar{
+       position: sticky;
+       top: 0;
+       background-color: #03080B;
+       background-image: linear-gradient(to right, #03080B, #2d3338);
+       z-index: 3;
+    }
+    .logo{
+        margin-left: 30px;
+        font-size: 30px;
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        z-index: -4;
+    }
+
+    .header-div {
+       display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        
+    }
+
+    nav ul{
+        list-style-type:none;
+        margin-right: 10%;
+    }
+    nav ul li {
+        display: inline-block;
+    }
+
+
+    nav ul li a{
+        text-decoration: none;
+        margin-right: 124px;
+        font-size: 20px;
+        color: white;
+    }
+
+    nav ul li a:hover{
+        border-bottom: 2px solid white;
+        border-radius: 2px;
+   
+    }
+
+ /*Hamburger Menu */
+    .ham-nav{
+      
+        display: none;
+        padding: 10px;
+        width: 100%;
+    }
+    .ham-div{
+            height: 50px;
+            width: 60px;
+            margin-left: auto;
+            position: relative;
+    }
+    .ham-div span{
+        height: 5px;
+        width: 50%;
+        background-color: white;
+        border-radius: 20px;
+        position: absolute;
+        top: 50%;
+        left: 45%;
+        cursor: pointer;
+    }
+    .ham-div span:nth-child(1){
+        top: 32%;
+    }
+    .ham-div span:nth-child(3){
+        top: 15%;
+    }
+    
+    
+    /*Hamburger menu to close button animation*/
+    .ham-div.active span:nth-child(1){
+       
+       top: 30%;
+        transform: translate(-50%,-50%)rotate(45deg);
+    }
+    .ham-div.active span:nth-child(2){
+        opacity: 0;
+    }
+    .ham-div.active span:nth-child(3){
+      
+        top: 20%;
+        transform: translate(-50%,50%)rotate(-45deg);
+    }
+
+    .ham-div.active{
+        top: 30px;
+        left: 30px;
+        position: fixed;
+       
+    }
+
+
+    .off-screen-menu{
+        background-color: black;
+         height: 100vh;
+         width: 100%;
+         max-width: 850px ;
+         position: fixed;
+         top: 0;
+         right: -850px ;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         text-align: center;
+         transition: 0.1s ease;
+         z-index: -1;
+         
+
+    }
+
+    .off-screen-menu.active{
+        right: 0;
+    }
+
+     /*Enterance*/
+
+     .enterance-text{
+        position: absolute;
+        width: 60%;
+        color: white;
+        margin-top: 12%;
+        margin-left: 5%;
+        font-family: "Permanent Marker", cursive;
+     }
+     .enterance-h1{
+        color: rgb(175, 0, 0);
+        font-size: 30px;
+     }
+     .enterance-p{
+        font-size: 20px;
+     }
+     .enterance-button{
+        background-color: rgba(0, 0, 0, 0);
+        color: rgb(0, 0, 0);
+        border: none;
+        padding: 10px;
+        border-radius: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        border: 3px solid white;
+        color: white;
+     }
+     .enterance-button:hover{
+        border: 1px solid white;
+        transition: 0.1s;
+        
+     }
+    
+    .about img {
+        height: 850px;
+        width: 100%;
+        object-fit: cover;
+    
+
+    }
+      /*About Us*/
+
+      .box-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        
+        margin-top: 100px;
+        margin: 100px 5%;
+        gap: 60px;
+        
+        
+      }
+      .box{
+        
+        font-size: 20px;
+        
+        
+      }
+
+      .box h1{
+        color: rgb(175, 0, 0);
+       border-bottom: 4px solid black;
+      }
+
+     .box p {
+        
+     }
+
+      .box img {
+       border-radius: 10px;
+       height: 600px;
+       width: 600px;
+       
+      }
+      /*Menu*/
+      .menu-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        
+      }
+      .menu-button{
+        position: absolute;
+        
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid white;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        padding: 30px;
+        border-radius: 15px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .menu-img{
+        height: auto;
+        width: 100%;
+        border-radius: 10px;
+        
+      }
+      
+      .menu-img.blur {
+        filter: blur(12px);
+        transition: 0.3s;
+      }
+      .menu-button:hover{
+        background-color: rgba(0, 0, 0, 0.644);
+        transition: 0.3s;
+      }
+
+      /*Gallery*/
+      .gallery-h1{
+        color: black;
+        font-size: 60px;
+        text-align: center;
+        border-bottom: 13px solid rgb(175, 0, 0);
+      }
+      
+      .gallery-div{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 130px;
+        
+      }
+      .photo1 img{
+        height: 400px;
+        width: 600px;
+        display: block;
+      }
+      /*Contact*/
+
+.contact {
+    margin-top: 40px;
+    background-color: #111;
+    padding: 80px 20px;
+    color: #fff;
+    
+  }
+  .contact-inner {
+    max-width: fit-content;
+    margin: 0 auto;
+    
+  }
+  .contact-title {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+ 
+  .contact-wrapper {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+
+  .booking-form {
+    flex: 1 1 400px;     /* grow twice as fast as sidebar, base width 400px */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group label {
+    color: rgb(175, 0, 0);
+    font-size: 20px;
+    margin-bottom: 5px;
+    
+  }
+  .booking-form input {
+    width: 100%;
+    padding: 12px;
+    background: rgba(0,0,0,0.6);
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+  }
+  .btn-primary {
+    grid-column: 1 / 1;   /* span both columns */
+    padding: 14px 24px;
+    background: rgb(175, 0, 0);
+    color: #111;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 50%;
+    margin-top: 10px;
+  }
+  
+
+  .working-hours {
+    flex: 1 1 300px;
+    background: rgba(0,0,0,0.8);
+    padding: 40px;
+    border-radius: 13px;
+  }
+  .working-hours h2 {
+    font-size: 23px;
+    margin-bottom: 16px;
+    color: rgb(175, 0, 0);
+  }
+  .working-hours p {
+    font-size: 15px;
+  }
+  .hours-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #444;
+    font-size: 15px;
+  }
+
+  /*Footer*/
+
+  .footer{
+    color: white;
+    background-color: black;
+    padding-top: 20px;
+  }
+
+  .footer h1 {
+    color: rgb(175, 0, 0);
+  }
+  .footer i {
+    color: rgb(175, 0, 0);
+  }
+
+  .footer-h1{
+    text-align: center;
+    font-size: 35px;
+  }
+
+
+  .container-footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    flex: 1;
+    padding-bottom: 130px;
+  }
+
+  .footer-div i:hover{
+    color: white;
+    transition: 0.3s;
+    cursor: pointer;
+   
+  }
+
+  .map-div{
+    background-color: black;
+  }
+
+  .map{
+    width: 100%;
+   
+  }
+ .copyright{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 30px;
+    padding-bottom: 5px;
+ }
+
+
+
+
+
+ 
+  
+     @media (max-width:1531px){
+        
+        .box{
+            width: 600px;
+            
+        }
+        .box h1{
+            font-size: 20px;
+        }
+        .box p{
+            
+        }
+        .box img{
+           
+            
+        }
+        .gallery-div{
+       
+            margin: 0 100px;
+            
+          }
+          .photo1 img{
+            height: 400px;
+            width: 600px;
+            display: block;
+           
+           
+          }
+        
+    }
+
+    @media (max-width:1328px){
+        
+        .box{
+           
+        }
+        .box img{
+            height: 500px;
+            width: 500px;
+        }
+    }
+
+    @media (max-width:1190px){
+        nav ul li a{
+            margin-right: 64px;
+            font-size: 17px;
+        }
+    }
+    
+
+    @media (max-width:1150px){
+        nav ul li a{
+            margin-right: 34px;
+            font-size: 17px;
+        }
+        .box-container{
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .about img {
+            height: 550px;
+        }
+        
+        .box img{
+            height: 450px;
+            width: 450px;
+        }
+        .box {
+            text-align: center;
+        }
+        .box p{
+            height: 400px;
+            margin: 0 30px;
+        }
+        
+    }
+    @media (max-width:850px){
+        .header-link{
+            display: none;   
+           }
+           .ham-nav{
+               display: flex;
+               
+           }
+           .menu-button{
+            font-size: 15px;
+           }
+           .gallery-h1{
+            font-size: 30px;
+            border-bottom: 8px solid rgb(175, 0, 0);
+           }
+           
+    }
+    @media (max-width:800px){
+        nav ul li a{
+            margin-right: 32px;
+            font-size: 12px;
+        }
+    }
+    @media (max-width:750px){
+        .about img {
+            height: 350px;
+        }
+        .enterance-text{
+            margin-top: 1px;
+
+        }
+        .enterance-button{
+            padding: 10px;
+            font-size: 13px;
+        }
+        .enterance-h1{
+            font-size: 25px;
+        }
+        .enterance-p{
+            font-size: 15px;
+        }
+        .box img{
+            width: 450px;
+            height: 450px;
+        }
+        .container-footer{
+            display: grid;
+            
+          }
+    }
+
+
+    @media (max-width: 875px) {
+        .contact-wrapper {
+          flex-direction: column;
+        }
+        .booking-form {
+          grid-template-columns: 1fr;
+          width: 75%;
+        }
+        .btn-primary {
+          grid-column: auto;
+        }
+      }
+
+
+
+    @media (max-width:650px){
+        .box {
+            
+            
+            font-size: 14px;
+            width: 80%;
+        }
+        .box img{
+            width: 350px;
+            height: 350px;
+            
+        }
+        .gallery-div{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 0;
+            
+          }
+          .photo1 img{
+            height: 100%;
+            width: 100%;
+            display: block;
+           
+           
+          }
+          .menu-button{
+            padding: 20px;
+            font-size: 10px;
+           }
+        
+    }
+    
+    @media (max-width:470px){
+        .about img {
+            height: 400px;
+            object-fit: fill;
+        }
+        
+        .enterance-h1{
+            font-size: 20px;
+        }
+        .enterance-p{
+            font-size: 17px;
+        }
+        .enterance-button{
+            padding: 3px;
+            font-size: 10px;
+            
+        }
+        .box p{
+            text-align: center;
+         
+        }
+        .box img{
+            width: 270px;
+            height: 270px;
+        }
+    }
